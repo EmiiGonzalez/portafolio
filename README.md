@@ -1,50 +1,116 @@
-# React + TypeScript + Vite
+# Portfolio Terminal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Portfolio Preview](https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1200&q=80)
 
-Currently, two official plugins are available:
+Una página web de portfolio personal con diseño inspirado en terminal, construida con React, TypeScript y Tailwind CSS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Características
 
-## Expanding the ESLint configuration
+- 🎨 Diseño inspirado en terminal de comandos
+- 💻 Interfaz interactiva y responsive
+- 🚀 Sección de proyectos con imágenes y enlaces
+- 📧 Formulario de contacto integrado con EmailJS
+- 🎯 Optimizado para rendimiento y accesibilidad
+- 🌙 Tema oscuro por defecto
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🛠️ Tecnologías
 
-- Configure the top-level `parserOptions` property like this:
+- React 18
+- TypeScript
+- Tailwind CSS
+- EmailJS
+- React Icons
+- React Hot Toast
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🚀 Instalación
+
+1. Clona el repositorio:
+
+```bash
+git clone https://github.com/EmiiGonzalez/portafolio.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Instala las dependencias:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+cd portfolio
+npm install
 ```
+
+3. Configura las variables de entorno:
+   - Crea un archivo `.env` en la raíz del proyecto
+   - Agrega tus credenciales de EmailJS:
+
+```env
+VITE_EMAILJS_SERVICE_ID=tu_service_id
+VITE_EMAILJS_TEMPLATE_ID=tu_template_id
+VITE_EMAILJS_PUBLIC_KEY=tu_public_key
+```
+
+4. Inicia el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+## 📝 Personalización
+
+### Proyectos
+
+Edita el archivo `src/components/Projects.tsx` para agregar tus propios proyectos:
+
+```typescript
+const projects = [
+  {
+    title: "Tu Proyecto",
+    description: "Descripción del proyecto",
+    technologies: ["Tech1", "Tech2"],
+    github: "https://github.com/tu-usuario/proyecto",
+    demo: "https://demo.proyecto.com",
+    image: "URL_de_la_imagen"
+  },
+  // Agrega más proyectos...
+];
+```
+
+### Información Personal
+
+Modifica el componente `TerminalAboutMe.tsx` para actualizar tu información personal:
+
+```typescript
+/*
+Por hacer
+*/
+```
+
+## 📱 Responsive Design
+
+El portfolio está completamente optimizado para diferentes tamaños de pantalla:
+
+- Mobile: 320px+
+- Tablet: 768px+
+- Desktop: 1024px+
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Por favor, abre un issue primero para discutir los cambios que te gustaría realizar.
+
+1. Fork el repositorio
+2. Crea tu rama de características (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
+
+## 📬 Contacto
+
+Emiliano Gonzalez - [emigonzalez3333@gmail.com]()
+
+Link del proyecto: [https://github.com/EmiiGonzalez/portafolio](https://github.com/EmiiGonzalez/portafolio)
+
+---
+
+⭐️ From [EmiiGonzalez](https://github.com/EmiiGonzalez)
