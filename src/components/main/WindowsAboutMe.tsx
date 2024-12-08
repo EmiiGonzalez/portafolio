@@ -1,14 +1,16 @@
 import { FaTerminal } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { info } from "../../config/about_me/info";
 
 export const WindowsAboutMe = () => {
+  const { mame, description } = info;
   return (
     <motion.div
       initial={{ x: -50, opacity: 0 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 1 }}
-      className="w-full h-full bg-[#1E1E1E] p-3 rounded-md font-mono"
+      className="w-full h-full bg-[#1E1E1E] p-3 rounded-md font-mono md:w-3/4 md:min-h-full md:p-6 md:mt-0 md:mb-0 md:mx-auto" 
     >
       <div className="w-full h-full">
         <div className="relative rounded-md bg-[#2D2D2D] px-3 py-1 flex items-center justify-between">
@@ -37,7 +39,7 @@ export const WindowsAboutMe = () => {
              animate={{ opacity: 1, y: 0 }}
              transition={{ duration: 1 }}
              className="text-white my-2">
-              Emiliano Gonzalez
+              {mame}
             </motion.p>
           </div>
         </div>
@@ -51,9 +53,7 @@ export const WindowsAboutMe = () => {
              animate={{ opacity: 1, y: 0 }}
              transition={{ duration: 1 }}
              className="text-white my-2">
-              Desarrollador Backend apasionado por crear soluciones escalables y
-              robustas. Especializado en arquitecturas de microservicios y APIs
-              RESTful.
+              {description}
             </motion.p>
           </div>
         </div>

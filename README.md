@@ -75,12 +75,11 @@ const projects = [
 
 ### Información Personal
 
-Modifica el componente `TerminalAboutMe.tsx` para actualizar tu información personal:
+Modifica el archivo info.ts en `src/config/about_me/info.ts` para actualizar tu información personal:
 
 ```typescript
-/*
-Por hacer
-*/
+    mame: string,
+    description: string
 ```
 
 ## 📱 Responsive Design
