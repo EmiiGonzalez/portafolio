@@ -46,7 +46,7 @@ export const WindowsAboutMe = () => {
         <div className="my-4">
           <div>
             <p className="text-green-400 flex items-center">
-              <FaArrowRight className="mr-2" />$ whoami
+              <FaArrowRight className="mr-2" />$ cat about.txt
             </p>
             <motion.p
              initial={{ opacity: 0, y: +50 }}

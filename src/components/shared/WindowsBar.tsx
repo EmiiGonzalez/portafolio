@@ -4,7 +4,7 @@ import { FaTerminal } from "react-icons/fa6";
 export const WindowsBar = ({ children }: WindowsBarProps) => {
   return (
     <motion.nav
-      className="relative rounded-md bg-[#2D2D2D] p-4 flex items-center justify-between"
+      className="relative w-full rounded-md bg-[#2D2D2D] p-4 flex items-center justify-between"
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -18,11 +18,13 @@ export const WindowsBar = ({ children }: WindowsBarProps) => {
       </div>
 
       {/* Contenido de la barra de windows */}
-      {children}
+      <div className="flex items-center w-full justify-start space-x-2">
+        {children}
+      </div>
     </motion.nav>
   );
 };
 
 interface WindowsBarProps {
-  children: React.ReactNode
-} 
+  children: React.ReactNode;
+}

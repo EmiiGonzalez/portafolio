@@ -2,11 +2,12 @@ import { NavBar } from "./components/header/NavBar";
 import { WindowsAboutMe } from "./components/main/WindowsAboutMe";
 import perfil_foto from "./assets/img/perfil_foto.png";
 import { motion } from "motion/react";
+import { WindowsSkills } from "./components/main/WindowsSkills";
 
 function App() {
   return (
     <>
-      <header className="w-full sticky top-0 z-50 mb-4">
+      <header className="w-full sticky top-0 z-50 mb-4 shadow-2xl">
         <NavBar />
       </header>
       <main className="w-full mt-4">
@@ -29,6 +30,8 @@ function App() {
 
           <WindowsAboutMe />
         </motion.section>
+
+        <WindowsSkills />
       </main>
     </>
   );
