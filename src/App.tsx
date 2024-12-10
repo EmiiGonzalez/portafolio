@@ -3,6 +3,7 @@ import { WindowsAboutMe } from "./components/main/WindowsAboutMe";
 import perfil_foto from "./assets/img/perfil_foto.png";
 import { motion } from "motion/react";
 import { WindowsSkills } from "./components/main/WindowsSkills";
+import { WindowsProjects } from "./components/main/WindowsProjects";
 
 function App() {
   return (
@@ -32,6 +33,8 @@ function App() {
         </motion.section>
 
         <WindowsSkills />
+
+        <WindowsProjects />
       </main>
     </>
   );

@@ -1,4 +1,3 @@
-
 export const SkillsCard = ({rol, technologies, icon}: SkillsCardsProps) => {
   return (
     <div className="flex flex-col items-start bg-[#2D2D2D] space-x-2 rounded-lg p-4 w-full border border-transparent hover:border-green-400 transition-all md:min-h-40 ">
