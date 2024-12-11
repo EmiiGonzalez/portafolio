@@ -102,7 +102,7 @@ Las contribuciones son bienvenidas. Por favor, abre un issue primero para discut
 
 ## 📄 Licencia
 
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
+* [ ] Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
 
 ## 📬 Contacto
 
