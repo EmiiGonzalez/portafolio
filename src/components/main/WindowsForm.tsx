@@ -6,12 +6,14 @@ import { FiGithub } from "react-icons/fi";
 import { useState } from "react";
 import { FiLinkedin } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
+import { social } from "../../config/about_me/info";
 
 export const WindowsForm = () => {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [message, setMessage] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
+  const { github, linkedin, email: emailSocial } = social;
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -101,9 +103,15 @@ export const WindowsForm = () => {
           <FaArrowRight className="mr-2" />$ ls social/
         </motion.p>
         <div className="text-green-400 flex gap-6">
-            <a href="#" className="flex items-center mt-4"><FiGithub className="mr-2"/> Github </a>
-            <a href="#" className="flex items-center mt-4"><FiLinkedin className="mr-2"/> Linkedin</a>
-            <a href="#" className="flex items-center mt-4"><MdOutlineEmail className="mr-2"/> Email</a>
+          <a href={github} target="_blank" className="flex items-center mt-4 hover:text-[#22C55E] hover:underline">
+            <FiGithub className="mr-2" /> Github{" "}
+          </a>
+          <a href={linkedin} target="_blank" className="flex items-center mt-4 hover:text-[#22C55E] hover:underline">
+            <FiLinkedin className="mr-2" /> Linkedin
+          </a>
+          <a href={`mailto:${emailSocial}`} target="_blank" className="flex items-center mt-4 hover:text-[#22C55E] hover:underline">
+            <MdOutlineEmail className="mr-2" /> Email
+          </a>
         </div>
       </div>
     </motion.section>
