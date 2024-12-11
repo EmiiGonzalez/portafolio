@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { WindowsBar } from "../shared/WindowsBar";
 import { FaArrowRight } from "react-icons/fa6";
-import { projects } from "../../config/about_me/projects";
+import { Projects } from "../../config/about_me/projects";
 import { ProjectCard } from "./cards/ProjectCard";
 
 export const WindowsProjects = () => {
@@ -35,7 +35,7 @@ export const WindowsProjects = () => {
           transition={{ duration: 1 }}
           className="text-white my-2 grid grid-cols-1 gap-5 p-2 rounded-md md:grid-cols-2 md:gap-3"
         >
-          {projects.map((project) => (
+          {Projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
         </motion.div>

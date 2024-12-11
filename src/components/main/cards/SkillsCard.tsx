@@ -8,8 +8,8 @@ export const SkillsCard = ({rol, technologies, icon}: SkillsCardsProps) => {
       <div className="flex mt-3">
         <ul className="list-disc list-inside">
           {technologies.map((t) => (
-            <li className="text-white">{t}</li>
-          ))}
+            <li className="text-white" key={Math.random() + t}>{t}</li>
+          ))} 
         </ul>
       </div>
     </div>

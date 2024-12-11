@@ -4,6 +4,8 @@ import perfil_foto from "./assets/img/perfil_foto.png";
 import { motion } from "motion/react";
 import { WindowsSkills } from "./components/main/WindowsSkills";
 import { WindowsProjects } from "./components/main/WindowsProjects";
+import { WindowsForm } from "./components/main/WindowsForm";
+import { Footer } from "./components/footer/Footer";
 
 function App() {
   return (
@@ -35,7 +37,11 @@ function App() {
         <WindowsSkills />
 
         <WindowsProjects />
+
+        <WindowsForm />
       </main>
+
+      <Footer />
     </>
   );
 }
