@@ -1,12 +1,13 @@
-import projectImg from "../../assets/img/projects/project.jpg";
-import techLibrary from "../../assets/img/projects/tech_library.jpg"
-import escuelas_back from "../../assets/img/projects/escuelas_back.jpg"
+import projectImg from "/img/projects/project.jpg";
+import techLibrary from "/img/projects/tech_library.jpg";
+import escuelas_back from "/img/projects/escuelas_back.jpg";
+
 
 export const Projects : ProjectInterface[] = [
   {
     title: "API Gestion de clientes",
     description:
-      "El proyecto Gestión de Clientes EGServis es un sistema desarrollado para administrar información de clientes y servicios. Incluye funciones como registro, consulta, y seguimiento de datos relevantes. Está diseñado para optimizar procesos comerciales y mejorar la organización en empresas de servicios. Para más detalles, visita el repositorio.",
+      "El proyecto Gestión de Clientes EGServis es un sistema desarrollado para administrar información de clientes y servicios. Incluye funciones como registro, consulta, y seguimiento de datos relevantes. Está diseño para optimizar procesos comerciales y mejorar la organización en empresas de servicios. Para más detalles, visita el repositorio.",
     technologies: ["Java", "MySQL", "JWT", "Spring Boot", "Docker"],
     github: "https://github.com/EmiiGonzalez/gestion_de_clientes_egservis",
     demo: undefined,
