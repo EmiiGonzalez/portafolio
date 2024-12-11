@@ -14,7 +14,7 @@ export const WindowsSkills = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="w-full h-full bg-[#1E1E1E] p-3 my-5 rounded-md font-mono md:w-3/4 md:min-h-full md:p-6 md:mb-0 md:mx-auto" 
+      className="w-full h-full bg-[#1E1E1E] p-3 my-5 rounded-md font-mono md:w-4/5 md:min-h-full md:p-6 md:mb-0 md:mx-auto" 
     >
         <div className="relative rounded-md bg-[#2D2D2D]flex items-center justify-between w-full">
           <WindowsBar>

@@ -1,7 +1,8 @@
-import { motion } from "framer-motion"; // Corrección de import
+import { motion } from "framer-motion";
 import { FaBars } from "react-icons/fa6";
 import { useRef, useState, useEffect } from "react";
 import { WindowsBar } from "../shared/WindowsBar";
+
 
 export const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(
@@ -9,6 +10,7 @@ export const NavBar = () => {
   );
 
   const menuRef = useRef<HTMLUListElement>(null);
+  const navbarHeight = 65; // Altura aproximada de la barra de navegación
 
   const handleResize = () => {
     if (window.innerWidth >= 768) {
@@ -24,7 +26,7 @@ export const NavBar = () => {
         window.innerWidth < 768 &&
         menuRef.current &&
         !menuRef.current.contains(event.target as Node) &&
-        !(event.target as HTMLElement).closest("button") // Excluir el botón del menú
+        !(event.target as HTMLElement).closest("button")
       ) {
         setMenuOpen(false);
       }
@@ -38,6 +40,17 @@ export const NavBar = () => {
       document.removeEventListener("mousedown", handleOutsideClick);
     };
   }, []);
+
+  const handleNavigation = (id: string) => {
+    const section = document.querySelector(id);
+    if (section) {
+      const offset = section.getBoundingClientRect().top + window.scrollY - navbarHeight;
+      window.scrollTo({ top: offset});
+    }
+    if (window.innerWidth < 768) {
+      setMenuOpen(false);
+    }
+  };
 
   const onClick = () => {
     if (window.innerWidth < 768) {
@@ -66,24 +79,36 @@ export const NavBar = () => {
         } absolute bg-[#2D2D2D] rounded-b-xl top-16 left-0 w-full flex-col items-center space-y-4 py-1 md:flex md:relative md:top-auto md:left-auto md:w-full md:flex-row md:items-center md:justify-around md:space-y-0 md:space-x-4 text-gray-400 font-mono font-bold text-xl`}
       >
         <li>
-          <a className="hover:text-white" href="#sobre_mi" onClick={onClick}>
+          <button
+            className="hover:text-white"
+            onClick={() => handleNavigation("#sobre_mi")}
+          >
             Sobre Mí
-          </a>
+          </button>
         </li>
         <li>
-          <a className="hover:text-white" href="#skills" onClick={onClick}>
+          <button
+            className="hover:text-white"
+            onClick={() => handleNavigation("#skills")}
+          >
             Skills
-          </a>
+          </button>
         </li>
         <li>
-          <a className="hover:text-white" href="#proyectos" onClick={onClick}>
+          <button
+            className="hover:text-white"
+            onClick={() => handleNavigation("#proyectos")}
+          >
             Proyectos
-          </a>
+          </button>
         </li>
         <li>
-          <a className="hover:text-white" href="#contacto" onClick={onClick}>
+          <button
+            className="hover:text-white"
+            onClick={() => handleNavigation("#contacto")}
+          >
             Contacto
-          </a>
+          </button>
         </li>
       </motion.ul>
     </WindowsBar>

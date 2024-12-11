@@ -10,18 +10,18 @@ import { Footer } from "./components/footer/Footer";
 function App() {
   return (
     <>
-      <header className="w-full sticky top-0 z-50 mb-4 shadow-2xl">
+      <header className="w-full sticky md:w-[95%] md:mx-auto top-0 z-50 mb-4 shadow-2xl">
         <NavBar />
       </header>
-      <main className="w-full mt-4">
+      <main className="w-[95%] md:w-full mt-4 flex flex-col items-center mx-auto">
         <motion.section
           id="sobre_mi"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
-          className="h-full w-full flex flex-col items-end justify-center md:flex-row-reverse gap-4"
+          className="h-full md:w-4/5 flex flex-col items-center justify-center md:flex-row-reverse gap-4"
         >
-          <picture className="w-full md:w-3/12">
+          <picture className="w-full md:w-fit">
           <motion.img
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 3, repeat: Infinity, repeatType: "loop" }}
