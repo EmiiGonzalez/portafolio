@@ -24,7 +24,7 @@ export const ProjectCard = ({
         </div>
         <div className="flex flex-col gap-3 w-full">
           <div className="flex items-center justify-start space-x-2 mt-5 flex-wrap gap-2">
-            {technologies.map((t) => (
+            {technologies.map((t: string) => (
               <p
                 key={Math.random() + t}
                 className="text-green-400 py-1 px-2 rounded-md bg-[#1E1E1E]"

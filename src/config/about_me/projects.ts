@@ -2,7 +2,6 @@ import projectImg from "/img/projects/project.jpg";
 import techLibrary from "/img/projects/tech_library.jpg";
 import escuelas_back from "/img/projects/escuelas_back.jpg";
 
-
 export const Projects : ProjectInterface[] = [
   {
     title: "API Gestion de clientes",
