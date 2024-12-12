@@ -12,13 +12,13 @@ export const ProjectCard = ({
   demo,
 }: ProjectInterface) => {
   return (
-    <div className="flex flex-col items-start bg-[#2D2D2D] space-x-2 rounded-lg w-full border border-transparent hover:border-green-400 transition-all md:min-h-40 h-full overflow-hidden">
+    <div className="flex flex-col items-start bg-[#2D2D2D] rounded-lg w-full border border-transparent hover:border-green-400 transition-all md:min-h-40 h-full overflow-hidden">
       <img
         src={image}
         alt="imagen del proyecto"
         className="w-full h-1/2 md:max-h-fit rounded-t-lg hover:scale-105 hover:transition-all hover:duration-500 hover:ease-in-out"
       />
-      <div className="flex flex-col items-start w-full h-full justify-between">
+      <div className="flex flex-col items-start w-full h-full justify-between px-2">
         <div className="flex flex-col mt-3 mx-2">
           <p className="text-2xl text-green-400 font-bold">{title}</p>
           <p className="text-white text-lg">{description}</p>

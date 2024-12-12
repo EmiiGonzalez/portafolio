@@ -15,7 +15,7 @@ export const WindowsProjects = () => {
     >
       <div className="relative rounded-md bg-[#2D2D2D]flex items-center justify-between w-full">
         <WindowsBar>
-          <p className="text-[#9CA3AF] text-sm  mx-2 md:text-lg">kills.sh</p>
+          <p className="text-[#9CA3AF] text-sm  mx-2 md:text-lg">proyectos.sh</p>
         </WindowsBar>
       </div>
 
@@ -26,7 +26,7 @@ export const WindowsProjects = () => {
           transition={{ duration: 1 }}
           className="text-green-400 flex items-center"
         >
-          <FaArrowRight className="mr-2" />$ ls kills/
+          <FaArrowRight className="mr-2" />$ ls projects/
         </motion.p>
 
         <motion.div
