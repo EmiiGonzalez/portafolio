@@ -20,7 +20,7 @@ Una página web de portfolio personal con diseño inspirado en terminal, constru
 - Tailwind CSS
 - EmailJS
 - React Icons
-- React Hot Toast
+- React Hook Form
 
 ## 🚀 Instalación
 
