@@ -1,6 +1,7 @@
 import { FaGithub } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
-import { ProjectInterface } from "../../../config/about_me/Projects.ts";
+import { ProjectInterface } from "../../../config/about_me/projects";
+
 
 export const ProjectCard = ({
   title,

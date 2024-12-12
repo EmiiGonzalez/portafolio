@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { WindowsBar } from "../shared/WindowsBar";
 import { FaArrowRight } from "react-icons/fa6";
 import { ProjectCard } from "./cards/ProjectCard";
-import { ProjectInterface, Projects } from "../../config/about_me/Projects.ts";
+import { ProjectInterface, Projects } from "../../config/about_me/projects";
 
 export const WindowsProjects = () => {
   return (
