@@ -4,6 +4,7 @@ import { WindowsSkills } from "./components/main/WindowsSkills";
 import { WindowsProjects } from "./components/main/WindowsProjects";
 import { WindowsForm } from "./components/main/WindowsForm";
 import { Footer } from "./components/footer/Footer";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <WindowsProjects />
 
         <WindowsForm />
+        <Toaster />
       </main>
 
       <Footer />

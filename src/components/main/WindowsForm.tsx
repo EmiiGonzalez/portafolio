@@ -7,6 +7,9 @@ import { FiLinkedin } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
 import { social } from "../../config/about_me/info";
 import { useForm, SubmitHandler } from "react-hook-form";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
+import toast from "react-hot-toast";
 
 type Inputs = {
   name: string;
@@ -17,6 +20,8 @@ type Inputs = {
 export const WindowsForm = () => {
   const { github, linkedin, email: emailSocial } = social;
 
+  const [isSending, setIsSending] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -24,8 +29,48 @@ export const WindowsForm = () => {
     formState: { errors },
   } = useForm<Inputs>();
 
+  const sendEmail = (e: Inputs) => {
+    const { name: user_name, email: user_email, message } = e;
+
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        { user_name, user_email, message },
+        {
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        }
+      )
+      .then(
+        () => {
+          toast.success("Email enviado con exito!", {
+            icon: "🚀",
+            style: {
+              borderRadius: "10px",
+              background: "#333",
+              color: "#fff",
+            },
+          });
+        },
+        () => {
+          toast.error("Algo salio mal, intenta de nuevo!", {
+            icon: "😓",
+            style: {
+              borderRadius: "10px",
+              background: "#333",
+              color: "#fff",
+            },
+          });
+        }
+      )
+      .finally(() => {
+        setIsSending(false);
+      });
+  };
+
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log(data);
+    setIsSending(true);
+    sendEmail(data);
   };
 
   return (
@@ -127,10 +172,15 @@ export const WindowsForm = () => {
             initial={{ opacity: 0, y: +50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className={`text-white flex items-center mt-4  py-2 px-4 rounded-lg border border-transparent ${errors.name || errors.email || errors.message ? "bg-red-500 animate-pulse" : "bg-[#22C55E]"}`}
+            disabled={isSending}
+            className={`text-white flex items-center mt-4  py-2 px-4 rounded-lg border border-transparent ${
+              errors.name || errors.email || errors.message
+                ? "bg-red-500 animate-pulse"
+                : "bg-[#22C55E]"
+            }`}
           >
             <FiSend className="mr-2" />
-            Enviar mensaje
+            {isSending ? "Enviando..." : "Enviar mensaje"}
           </motion.button>
         </motion.form>
 
