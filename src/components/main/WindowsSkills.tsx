@@ -29,7 +29,7 @@ export const WindowsSkills = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
             className="text-green-400 flex items-center">
-              <FaArrowRight className="mr-2" />$ ls kills/
+              <FaArrowRight className="mr-2" />$ ls skills/
             </motion.p>
             <motion.div
              initial={{ opacity: 0, y: +50 }}
