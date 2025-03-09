@@ -19,7 +19,7 @@ export const WindowsSkills = () => {
         <div className="relative rounded-md bg-[#2D2D2D]flex items-center justify-between w-full">
           <WindowsBar>
             <p className="text-[#9CA3AF] text-sm  mx-2 md:text-lg">
-            kills.sh
+            skills.sh
             </p>
           </WindowsBar>
 
