@@ -3,14 +3,20 @@ import perfil_foto from "/img/perfil_foto.png";
 export const info: InfoInterface = {
   mame: "Emiliano Gonzalez",
   description:
-    "Desarrollador Backend apasionado por crear soluciones escalables y robustas. Especializado en arquitecturas de microservicios y APIs RESTful.",
+    "Desarrollador Backend apasionado por crear soluciones escalables y robustas. Especializado en arquitecturas de microservicios, APIs RESTful y optimización de bases de datos. Me enfoco en escribir código limpio, mantenible y siguiendo las mejores prácticas de desarrollo.",
   image: perfil_foto,
+  experience: "2+ años",
+  location: "Argentina",
+  availability: "Disponible para proyectos",
 };
 
 interface InfoInterface {
   mame: string;
   description: string;
   image?: string;
+  experience?: string;
+  location?: string;
+  availability?: string;
 }
 
 export const social: SocialInterface = {
@@ -24,3 +30,21 @@ interface SocialInterface {
   linkedin: string;
   email: string;
 }
+
+export const achievements = [
+  {
+    title: "Proyectos Completados",
+    value: "15+",
+    description: "Aplicaciones web desarrolladas"
+  },
+  {
+    title: "Tecnologías",
+    value: "10+",
+    description: "Lenguajes y frameworks dominados"
+  },
+  {
+    title: "Experiencia",
+    value: "2+",
+    description: "Años desarrollando software"
+  }
+];

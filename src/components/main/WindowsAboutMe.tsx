@@ -19,7 +19,7 @@ export const WindowsAboutMe = () => {
           transition={{ duration: 3, repeat: Infinity, repeatType: "loop" }}
           src={info.image}
           alt="Foto de perfil"
-          className="mx-auto block aspect-square rounded-3xl mb-4 w-1/2 md:mb-0 md:w-full"
+          className="mx-auto block aspect-square rounded-3xl mb-4 w-1/2 md:mb-0 md:w-full shadow-2xl border-2 border-green-400/20 hover:border-green-400/50 transition-all duration-300"
         />
       </picture>
 
@@ -27,15 +27,15 @@ export const WindowsAboutMe = () => {
         initial={{ x: -50, opacity: 0 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
-        className="w-full h-full bg-[#1E1E1E] p-3 rounded-md font-mono md:w-3/4 md:min-h-full md:p-6 md:mt-0 md:mb-0 md:mx-auto"
+        className="w-full h-full bg-[#1E1E1E] p-3 rounded-md font-mono md:w-3/4 md:min-h-full md:p-6 md:mt-0 md:mb-0 md:mx-auto shadow-2xl border border-gray-700/50"
       >
         <div className="w-full h-full">
           <div className="relative rounded-md bg-[#2D2D2D] px-3 py-1 flex items-center justify-between">
             {/* Botones e ícono */}
             <div className="flex items-center space-x-2">
-              <div className="size-3 rounded-full bg-red-500"></div>
-              <div className="size-3 rounded-full bg-yellow-500"></div>
-              <div className="size-3 rounded-full bg-green-500"></div>
+              <div className="size-3 rounded-full bg-red-500 hover:bg-red-400 transition-colors cursor-pointer"></div>
+              <div className="size-3 rounded-full bg-yellow-500 hover:bg-yellow-400 transition-colors cursor-pointer"></div>
+              <div className="size-3 rounded-full bg-green-500 hover:bg-green-400 transition-colors cursor-pointer"></div>
               <FaTerminal className="size-3 text-green-400" />
             </div>
 
@@ -55,7 +55,7 @@ export const WindowsAboutMe = () => {
                 initial={{ opacity: 0, y: +50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
-                className="text-white my-2"
+                className="text-white my-2 text-lg font-medium"
               >
                 {mame}
               </motion.p>
@@ -70,10 +70,27 @@ export const WindowsAboutMe = () => {
                 initial={{ opacity: 0, y: +50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
-                className="text-white my-2"
+                className="text-white my-2 leading-relaxed"
               >
                 {description}
               </motion.p>
+            </div>
+          </div>
+          <div className="my-4">
+            <div>
+              <p className="text-green-400 flex items-center">
+                <FaArrowRight className="mr-2" />$ cat experience.txt
+              </p>
+              <motion.div
+                initial={{ opacity: 0, y: +50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.2 }}
+                className="text-white my-2 space-y-2"
+              >
+                <p className="text-gray-300">• 2+ años desarrollando aplicaciones web</p>
+                <p className="text-gray-300">• Especializado en arquitecturas escalables</p>
+                <p className="text-gray-300">• Experiencia en equipos ágiles</p>
+              </motion.div>
             </div>
           </div>
         </div>
