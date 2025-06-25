@@ -35,11 +35,14 @@ export const HeroSection = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.4 }}
-        className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
+        className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
       >
-        Desarrollador Backend especializado en crear{" "}
-        <span className="text-green-400 font-semibold">soluciones escalables</span> y{" "}
-        <span className="text-green-400 font-semibold">APIs robustas</span>
+        Desarrollador{" "}
+        <span className="text-green-400 font-semibold">Full Stack</span> y{" "}
+        <span className="text-green-400 font-semibold">Mobile</span> especializado en crear{" "}
+        <span className="text-green-400 font-semibold">soluciones completas</span>,{" "}
+        <span className="text-green-400 font-semibold">APIs robustas</span> y{" "}
+        <span className="text-green-400 font-semibold">aplicaciones móviles nativas</span>
       </motion.p>
       
       <motion.div

@@ -1,16 +1,17 @@
 import projectImg from "/img/projects/project.jpg";
 import techLibrary from "/img/projects/tech_library.jpg";
 import escuelas_back from "/img/projects/escuelas_back.jpg";
+import cortateBien from "/img/projects/cortate_bien.jpg";
 
 export const Projects : ProjectInterface[] = [
   {
-    title: "API Gestion de clientes",
+    title: "Cortate Bien - SaaS",
     description:
-      "El proyecto Gestión de Clientes EGServis es un sistema desarrollado para administrar información de clientes y servicios. Incluye funciones como registro, consulta, y seguimiento de datos relevantes. Está diseño para optimizar procesos comerciales y mejorar la organización en empresas de servicios. Para más detalles, visita el repositorio.",
-    technologies: ["Java", "MySQL", "JWT", "Spring Boot", "Docker"],
-    github: "https://github.com/EmiiGonzalez/gestion_de_clientes_egservis",
-    demo: undefined,
-    image: projectImg,
+      "SaaS completo para gestión de peluquerías y barberías desarrollado con arquitectura moderna. Incluye sistema de reservas, gestión de clientes, dashboard administrativo, notificaciones push y aplicación móvil nativa. Implementé tanto el backend robusto como la experiencia de usuario completa en web y mobile.",
+    technologies: ["NestJS", "React Native", "TypeScript", "PostgreSQL", "JWT", "Push Notifications", "Stripe"],
+    github: "https://github.com/EmiiGonzalez/cortate_bien",
+    demo: "https://www.cortatebien.com/",
+    image: cortateBien,
   },
   {
     title: "Tech Library",
@@ -22,20 +23,20 @@ export const Projects : ProjectInterface[] = [
     image: techLibrary,
   },
   {
-    title: "Escuelas Project Backend",
+    title: "API Gestion de clientes",
     description:
-      "El proyecto Escuelas Project Back es el backend de un sistema para gestionar temas relacionados con clases, cursos, escuelas y asistencias. Está desarrollado principalmente en Java (99.4%) y utiliza un Dockerfile para su configuración. Incluye documentación y archivos como un archivo Excel de códigos de error y un Docker Compose YAML para la ejecución de servicios",
+      "El proyecto Gestión de Clientes EGServis es un sistema desarrollado para administrar información de clientes y servicios. Incluye funciones como registro, consulta, y seguimiento de datos relevantes. Está diseño para optimizar procesos comerciales y mejorar la organización en empresas de servicios. Para más detalles, visita el repositorio.",
     technologies: ["Java", "MySQL", "JWT", "Spring Boot", "Docker"],
-    github: "https://github.com/EmiiGonzalez/escuelas_project_back",
+    github: "https://github.com/EmiiGonzalez/gestion_de_clientes_egservis",
     demo: undefined,
-    image: escuelas_back,
+    image: projectImg,
   },
   {
-    title: "Escuelas Project Frontend",
+    title: "Escuelas Project - Full Stack",
     description:
-      "El proyecto Escuelas Project Front TS es el frontend de un sistema de gestión educativa, desarrollado con React, TypeScript, Material UI y Vite. Utiliza ESLint para mantener buenas prácticas de codificación. El código sigue una estructura modular y está configurado para facilitar la integración con el backend",
-    technologies: ["React", "TypeScript", "Material UI", "Vite", "TanStack Query", "Zustand"],
-    github: "https://github.com/EmiiGonzalez/escuelas_project_front_ts",
+      "Sistema completo de gestión educativa desarrollado con stack moderno. Incluye backend robusto para gestionar clases, cursos, escuelas y asistencias, junto con un frontend intuitivo y responsive. Implementé toda la arquitectura desde la base de datos hasta la interfaz de usuario.",
+    technologies: ["Java", "Spring Boot", "React", "TypeScript", "Material UI", "MySQL", "Docker", "TanStack Query"],
+    github: "https://github.com/EmiiGonzalez/escuelas_project_back",
     demo: undefined,
     image: escuelas_back,
   },

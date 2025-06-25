@@ -87,9 +87,28 @@ export const WindowsAboutMe = () => {
                 transition={{ duration: 1.2 }}
                 className="text-white my-2 space-y-2"
               >
-                <p className="text-gray-300">• 2+ años desarrollando aplicaciones web</p>
-                <p className="text-gray-300">• Especializado en arquitecturas escalables</p>
-                <p className="text-gray-300">• Experiencia en equipos ágiles</p>
+                <p className="text-gray-300">• 2+ años desarrollando aplicaciones Full Stack</p>
+                <p className="text-gray-300">• Especializado en arquitecturas escalables y mobile</p>
+                <p className="text-gray-300">• Experiencia creando SaaS completos</p>
+                <p className="text-gray-300">• Desarrollo tanto web como aplicaciones móviles nativas</p>
+              </motion.div>
+            </div>
+          </div>
+          <div className="my-4">
+            <div>
+              <p className="text-green-400 flex items-center">
+                <FaArrowRight className="mr-2" />$ ls stack/
+              </p>
+              <motion.div
+                initial={{ opacity: 0, y: +50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.4 }}
+                className="text-white my-2 space-y-2"
+              >
+                <p className="text-gray-300">• <span className="text-green-400">Backend:</span> Java, NestJS, Spring Boot, Node.js</p>
+                <p className="text-gray-300">• <span className="text-green-400">Frontend:</span> React, TypeScript, Next.js</p>
+                <p className="text-gray-300">• <span className="text-green-400">Mobile:</span> React Native, Expo</p>
+                <p className="text-gray-300">• <span className="text-green-400">Database:</span> PostgreSQL, MySQL, MongoDB</p>
               </motion.div>
             </div>
           </div>
