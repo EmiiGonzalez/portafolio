@@ -1,9 +1,16 @@
-
 export const Footer = () => {
   return (
-    <footer className="bg-[#1E1E1E] p-4 text-[#9CA3AF] w-full flex flex-col items-center justify-center gap-2 mb-0">
-      <p className="text-sm text-center">Hecho con ♥️ usando React y TypeScript</p>
-      <p className="text-sm text-center">©2024 Emiliano Gonzalez. Todos los derechos reservados.</p>
+    <footer className="border-t border-white/5 py-8 px-6">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p className="text-text-muted text-sm">
+          © {new Date().getFullYear()} Emiliano Gonzalez. Todos los derechos
+          reservados.
+        </p>
+        <p className="text-text-muted text-sm">
+          Hecho con <span className="text-accent-400">♥</span> usando React +
+          GSAP
+        </p>
+      </div>
     </footer>
-  )
-}
+  );
+};

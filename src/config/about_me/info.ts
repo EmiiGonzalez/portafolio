@@ -22,29 +22,15 @@ interface InfoInterface {
 export const social: SocialInterface = {
   github: "https://github.com/EmiiGonzalez",
   linkedin: "https://www.linkedin.com/in/emiigonzalez33/",
-  email: "emigonzalez3333@gmail.com",
+  email: "emidev06@gmail.com",
+  instagram: "https://www.instagram.com/soyemidev/",
+  tiktok: "https://www.tiktok.com/@soyemidev?lang=es",
 };
 
 interface SocialInterface {
   github: string;
   linkedin: string;
   email: string;
+  instagram: string;
+  tiktok: string;
 }
-
-export const achievements = [
-  {
-    title: "Proyectos Completados",
-    value: "20+",
-    description: "Aplicaciones web y mobile desarrolladas"
-  },
-  {
-    title: "Tecnologías",
-    value: "15+",
-    description: "Lenguajes y frameworks dominados"
-  },
-  {
-    title: "Experiencia",
-    value: "2+",
-    description: "Años desarrollando software Full Stack"
-  }
-];
